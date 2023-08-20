@@ -2,11 +2,14 @@ body{
     padding:0 3vw 0 3vw;
     background-color: #0D1117;
     color:white;
+    font-size: larger;
 }
 .social{
     margin-left: 2vw;
 }
-
+.sh{
+    padding:20px;
+}
 .sec{
     margin-bottom: 5vh;
 
