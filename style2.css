@@ -54,3 +54,9 @@ body{
     padding: px 200px;
     background-image: -moz-linear-gradient(l);
 }
+
+@media screen and (max-width:800px){
+    body{
+        font-size: medium;
+    }
+}
