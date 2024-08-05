@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #4caf50;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;  /* Ensures the content spans the width */
+    max-width: 800px; /* Constrains the content to a max-width */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.about-content-container {
+    background-color:#333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;  /* The about section now spans the full width of the content */
+    text-align: center;
+}
+
+.about-content-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f5f5f5;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    /* padding: 1rem 0; */
+    width:100%;
+    padding: 30px;
+    border-radius: 10px;
+    border:#1d1d1d;
+    display:flex;
+    margin: 0;
+   
+    
+
+}
+
+footer a {
+    color: #f5f5f5;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgb(80, 80, 239);
+}
+
+.container {
+    background-color: #47525249;
+    max-width: 600px;
+    width: 100%;
+   
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 2rem;
+}
