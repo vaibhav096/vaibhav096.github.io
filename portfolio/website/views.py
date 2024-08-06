@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import About,Resume,Project,Certification
+from .models import About,Resume,Project,Certification,Achievement,Education
 
 def home(request):
     about = About.objects.latest('updated_at')
@@ -25,3 +25,11 @@ def projects_view(request):
 def certifications_view(request):
     certifications = Certification.objects.all()
     return render(request, 'certifications.html', {'certifications': certifications})
+
+def achievements_view(request):
+    achievements = Achievement.objects.all()
+    return render(request, 'achievements.html', {'achievements': achievements})
+
+def education_view(request):
+    education_records = Education.objects.all()
+    return render(request, 'education.html', {'education_records': education_records})

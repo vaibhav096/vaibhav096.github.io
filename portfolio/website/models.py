@@ -31,6 +31,20 @@ class Certification(models.Model):
 
     def __str__(self):
         return self.course_name
+    
+class Achievement(models.Model):
+    description = models.TextField()  # This allows HTML content
+
+    def __str__(self):
+        return self.description[:50] 
+    
+class Education(models.Model):
+    education_class = models.CharField(max_length=100)  # General CharField for class
+    college_name = models.CharField(max_length=255)
+    marks_obtained = models.FloatField()  # Use FloatField for percentages with decimal points
+
+    def __str__(self):
+        return f"{self.education_class} from {self.college_name}"
 
 
 # Create your models here.

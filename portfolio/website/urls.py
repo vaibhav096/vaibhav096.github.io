@@ -6,7 +6,8 @@ urlpatterns = [
     path('resume/', views.resume_view, name='resume'),  # Resume page
     path('projects/', views.projects_view, name='projects'),  # Projects page
     path('certifications/', views.certifications_view, name='certifications'),  # Certifications page
-    # path('experience/', views.experience, name='experience'),  # Experience page
+    path('achievements/', views.achievements_view, name='achievements'),  # achivements page
+    path('education/', views.education_view, name='education'),
 ]
 
 

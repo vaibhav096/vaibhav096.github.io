@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Achievements{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center min-h-[70vh]">
+    {% for achievement in achievements %}
+    <div class="bg-[#474747] p-4 rounded-lg w-full max-w-xl mb-4 shadow-lg">
+        <!-- Achievement Description -->
+        <div class="text-black-800 mt-2 bg-white-500" >
+            🏆{{ achievement.description|safe }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
