@@ -1,10 +1,31 @@
 {% extends 'base.html' %}
 
-{% block title %}Resume - Portfolio{% endblock %}
+{% block title %}
+    Resume | Vaibhav Jadhav
+{% endblock %}
 
 {% block content %}
-<section class="resume-section">
-    <h2>My Resume</h2>
-    <p>{{ resume.content }}</p>
-</section>
+<div class="flex flex-col items-center min-h-[60vh]">
+    
+    <!-- Profile Picture -->
+    <div class="flex flex-col items-center mb-5">
+        {% load static%}
+        <img src="{% static 'profile1.jpg' %}" alt="Profile Picture" class="w-36 h-36 rounded-full mb-3">
+        <h2 class="text-3xl text-gray-200 font-bold">Vaibhav Jadhav</h2>
+    </div>
+    
+    <!-- Down Arrow Symbol -->
+    <div class="text-gray-200 text-4xl mb-4">
+        👇
+    </div>
+
+    <!-- Download Button -->
+    <div class="bg-[#474747] p-6 rounded-lg flex justify-center items-center w-full max-w-xl">
+        <a href="{{ pdf_url }}" download class="text-white bg-green-500 hover:bg-green-600 font-bold py-3 px-6 rounded-lg text-lg flex items-center">
+            <i class="fas fa-download mr-3"></i> <!-- Download Icon -->
+            Download Resume
+        </a>
+    </div>
+
+</div>
 {% endblock %}

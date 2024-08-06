@@ -22,3 +22,8 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path('', include('website.urls')),  # Include URLs from the 'website' app
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
