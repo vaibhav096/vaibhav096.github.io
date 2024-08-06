@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6!t2sfj+&n_rf@-uuos6sfzltqbc4$#plh-sp0r=9_x(=gy7**
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['vaibhav096.github.io']
+ALLOWED_HOSTS = ['*']
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 TAILWIND_APP_NAME = 'theme'
