@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Portfolio{% endblock %}</title>
     
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#1d1d1d] text-gray-200 font-sans flex justify-center items-center min-h-screen">
-    <div class="bg-[#47525249] max-w-3xl mx-auto rounded-xl shadow-lg p-8 w-full"> <!-- Added w-full for responsiveness -->
+    <div class="bg-[#47525249] max-w-3xl mx-auto rounded-xl shadow-lg p-8 w-full">
         <nav class="p-5 rounded-2xl mb-6">
-            <ul class="flex flex-wrap justify-center space-x-6 bg-[#1d1d1d] py-4 px-6 rounded-xl">
-                <li><a href="{% url 'home' %}" class="text-gray-200 hover:text-green-500 font-bold">Home</a></li>
-                <li><a href="{% url 'resume' %}" class="text-gray-200 hover:text-green-500 font-bold">Resume</a></li>
-                <li><a href="{% url 'projects' %}" class="text-gray-200 hover:text-green-500 font-bold">Projects</a></li>
-                <li><a href="{% url 'certifications' %}" class="text-gray-200 hover:text-green-500 font-bold">Certifications</a></li>
-                <li><a href="{% url 'achievements' %}" class="text-gray-200 hover:text-green-500 font-bold">Achievements</a></li>
-                <li><a href="{% url 'education' %}" class="text-gray-200 hover:text-green-500 font-bold">Education</a></li>
-            </ul>
+            <div class="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800 bg-[#1d1d1d]"> <!-- Adjusted bg color -->
+                <ul class="flex justify-start space-x-4 py-3 px-6 rounded-xl whitespace-nowrap bg-[#1d1d1d]"> <!-- Added bg color to ul -->
+                    <li><a href="{% url 'home' %}" class="text-gray-200 hover:text-green-500 font-bold">Home</a></li>
+                    <li><a href="{% url 'resume' %}" class="text-gray-200 hover:text-green-500 font-bold">Resume</a></li>
+                    <li><a href="{% url 'projects' %}" class="text-gray-200 hover:text-green-500 font-bold">Projects</a></li>
+                    <li><a href="{% url 'certifications' %}" class="text-gray-200 hover:text-green-500 font-bold">Certifications</a></li>
+                    <li><a href="{% url 'achievements' %}" class="text-gray-200 hover:text-green-500 font-bold">Achievements</a></li>
+                    <li><a href="{% url 'education' %}" class="text-gray-200 hover:text-green-500 font-bold">Education</a></li>
+                </ul>
+            </div>
         </nav>
 
         <div class="main-content">
