@@ -3,11 +3,10 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="flex flex-col items-center min-h-[60vh]"> <!-- Added min-height -->
+<div class="flex flex-col items-center min-h-[60vh] px-4"> <!-- Added padding for mobile responsiveness -->
     <div class="flex flex-col items-center mb-5">
-        {% load static %}
         <img src="{% static 'profile1.jpg' %}" alt="Profile Picture" class="w-36 h-36 rounded-full mb-3">
-        <h2 class="text-3xl text-gray-200 font-bold">Vaibhav Jadhav</h2>
+        <h2 class="text-3xl text-gray-200 font-bold text-center">Vaibhav Jadhav</h2> <!-- Centered the text -->
     </div>
     <div class="bg-[#1d1d1d] p-6 rounded-lg w-full max-w-xl text-center">
         <p class="text-gray-200 text-base leading-relaxed">{{ about.content }}</p>

@@ -6,13 +6,18 @@
 <div class="flex flex-col items-center min-h-[70vh] px-4">
     {% for record in education_records %}
     <div class="bg-[#474747] p-4 rounded-lg w-full max-w-xl mb-4 shadow-lg">
-        <!-- Add an emoji before the education class and adjust font styling -->
-        <h3 class="text-gray-200 text-xl font-semibold mb-2">
+        <!-- Education Class with Emoji and Improved Font Styling -->
+        <h3 class="text-gray-200 text-xl font-semibold mb-2 flex items-center">
             📚 {{ record.education_class }}
         </h3>
-        <p class="text-gray-300 text-base mb-1">College: <span class="font-medium">{{ record.college_name }}</span></p>
-        <!-- Add % sign after marks obtained and adjust font styling -->
-        <p class="text-gray-300 text-base">Marks Obtained: <span class="font-medium">{{ record.marks_obtained }}%</span></p>
+        <!-- College Name with Adjusted Font Styling -->
+        <p class="text-gray-300 text-base mb-1">College: 
+            <span class="font-medium">{{ record.college_name }}</span>
+        </p>
+        <!-- Marks Obtained with Percentage Sign and Improved Font Styling -->
+        <p class="text-gray-300 text-base">Marks Obtained: 
+            <span class="font-medium">{{ record.marks_obtained }}%</span>
+        </p>
     </div>
     {% endfor %}
 </div>

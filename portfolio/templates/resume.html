@@ -5,24 +5,24 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-col items-center min-h-[60vh]">
+<div class="flex flex-col items-center min-h-[60vh] px-4 sm:px-6 lg:px-8">
     
     <!-- Profile Picture -->
     <div class="flex flex-col items-center mb-5">
-        {% load static%}
-        <img src="{% static 'profile1.jpg' %}" alt="Profile Picture" class="w-36 h-36 rounded-full mb-3">
-        <h2 class="text-3xl text-gray-200 font-bold">Vaibhav Jadhav</h2>
+        {% load static %}
+        <img src="{% static 'profile1.jpg' %}" alt="Profile Picture" class="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full mb-3">
+        <h2 class="text-xl sm:text-2xl md:text-3xl text-gray-200 font-bold">Vaibhav Jadhav</h2>
     </div>
     
     <!-- Down Arrow Symbol -->
-    <div class="text-gray-200 text-4xl mb-4">
+    <div class="text-gray-200 text-3xl sm:text-4xl mb-4">
         👇
     </div>
 
     <!-- Download Button -->
-    <div class="bg-[#474747] p-6 rounded-lg flex justify-center items-center w-full max-w-xl">
-        <a href="{{ pdf_url }}" download class="text-white bg-green-500 hover:bg-green-600 font-bold py-3 px-6 rounded-lg text-lg flex items-center">
-            <i class="fas fa-download mr-3"></i> <!-- Download Icon -->
+    <div class="bg-[#474747] p-4 sm:p-6 rounded-lg flex justify-center items-center w-full max-w-md sm:max-w-xl">
+        <a href="{{ pdf_url }}" download class="text-white bg-green-500 hover:bg-green-600 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-base sm:text-lg flex items-center">
+            <i class="fas fa-download mr-2 sm:mr-3"></i> <!-- Download Icon -->
             Download Resume
         </a>
     </div>

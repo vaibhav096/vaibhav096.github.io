@@ -3,20 +3,20 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
-<div class="flex flex-col items-center min-h-[60vh]"> <!-- Set a minimum height to keep the page balanced -->
+<div class="flex flex-col items-center min-h-[60vh] px-4"> <!-- Added padding for better spacing on mobile -->
     {% for project in projects %}
-    <div class="bg-[#474747] p-4 rounded-lg w-full max-w-xl mb-4 shadow-lg"> <!-- Adjusted padding and margins -->
+    <div class="bg-[#474747] p-4 rounded-lg w-full max-w-xl mb-4 shadow-lg">
         
         <!-- Project Title with GitHub Link -->
         <div class="flex items-center mb-2">
-            <h3 class="text-xl text-green-500 font-bold">{{ project.title }}</h3> <!-- Adjusted font size -->
+            <h3 class="text-xl text-green-500 font-bold">{{ project.title }}</h3> <!-- Consistent font size for titles -->
             <a href="{{ project.github_link }}" target="_blank" class="ml-3">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" class="hover:opacity-80">
             </a>
         </div>
 
         <!-- Project Description -->
-        <p class="text-gray-200 text-sm leading-relaxed mb-2">{{ project.description }}</p> <!-- Adjusted font size -->
+        <p class="text-gray-200 text-sm leading-relaxed mb-2">{{ project.description }}</p>
 
         <!-- Technologies Used -->
         <div class="text-gray-400 text-xs">
