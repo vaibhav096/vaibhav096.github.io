@@ -19,8 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path("__reload__/", include("django_browser_reload.urls")),
-    path('', include('website.urls')),  # Include URLs from the 'website' app
+   
+    path('', include('website.urls')),  
 ]
 
 from django.conf import settings

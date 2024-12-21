@@ -1,26 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import About,Resume,Project,Certification,Achievement,Education
+from django.core.exceptions import ObjectDoesNotExist
+from .models import About, Resume, Project, Certification, Achievement, Education
 
 def home(request):
-    about = About.objects.latest('updated_at')
+    try:
+        about = About.objects.latest('updated_at')
+    except ObjectDoesNotExist:
+        about = None  # Fallback if no data is available
     return render(request, 'home.html', {'about': about})
 
-
-
 def resume_view(request):
-    resume = Resume.objects.last()
-    pdf_url = resume.pdf.url  # Adjust according to your model field
+    try:
+        resume = Resume.objects.last()
+        pdf_url = resume.pdf.url if resume else None
+    except ObjectDoesNotExist:
+        pdf_url = None  # Fallback if no data is available
     return render(request, 'resume.html', {'pdf_url': pdf_url})
 
-
-
-
 def projects_view(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all()  # Empty queryset is fine if no data is present
     return render(request, 'projects.html', {'projects': projects})
-
-
 
 def certifications_view(request):
     certifications = Certification.objects.all()

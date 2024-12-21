@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -87,9 +87,23 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
-}
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'portfolio',  
+        'USER': 'root',  
+        'PASSWORD': 'V1012@2014j',  
+        'HOST': 'https://vaibhav096-github-io.onrender.com/',  
+        'PORT': '3306',  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }  
+    }  
+}  
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
+# }
 
 
 # Password validation
@@ -128,7 +142,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_DIRS = [
-    os.path.join(BASE_DIR,'static'),
+    os.path.join(BASE_DIR,'website','static'),
 ]
 
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'collectstatic')]
