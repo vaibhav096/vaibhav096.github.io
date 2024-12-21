@@ -87,23 +87,23 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #     }
 # }
 
-DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'portfolio',  
-        'USER': 'root',  
-        'PASSWORD': 'V1012@2014j',  
-        'HOST': 'https://vaibhav096-github-io.onrender.com/',  
-        'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-        }  
-    }  
-}  
+# DATABASES = {  
+#     'default': {  
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'portfolio',  
+#         'USER': 'root',  
+#         'PASSWORD': 'V1012@2014j',  
+#         'HOST': 'https://vaibhav096-github-io.onrender.com/',  
+#         'PORT': '3306',  
+#         'OPTIONS': {  
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#         }  
+#     }  
+# }  
 
-# DATABASES = {
-#     'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
-# }
+DATABASES = {
+    'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
+}
 
 
 # Password validation
