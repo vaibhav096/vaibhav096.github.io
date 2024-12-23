@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
-from .models import About, Resume, Project, Certification, Achievement, Education
+from .models import About, Project, Certification, Achievement, Education
 
 def home(request):
     try:
@@ -11,12 +11,8 @@ def home(request):
     return render(request, 'home.html', {'about': about})
 
 def resume_view(request):
-    try:
-        resume = Resume.objects.last()
-        pdf_url = resume.pdf.url if resume else None
-    except ObjectDoesNotExist:
-        pdf_url = None  # Fallback if no data is available
-    return render(request, 'resume.html', {'pdf_url': pdf_url})
+    return render(request,'resume.html')
+    
 
 def projects_view(request):
     projects = Project.objects.all()  # Empty queryset is fine if no data is present

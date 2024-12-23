@@ -9,7 +9,7 @@ class About(models.Model):
     
 class Resume(models.Model):
     title = models.CharField(max_length=100)
-    pdf = models.FileField(upload_to='resumes/')
+    # pdf = models.FileField(upload_to='resumes/')
 
     def __str__(self):
         return self.title
